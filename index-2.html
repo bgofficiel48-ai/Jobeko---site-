@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071a36">
+<title>Jobeko — Gagnez en ligne</title>
+<style>
+:root{--navy:#071a36;--green:#08b76b;--muted:#71819a;--bg:#f2f6fa;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;color:var(--navy)}
+button{font:inherit;cursor:pointer;border:0}.wrap{max-width:760px;margin:auto;padding-bottom:88px}
+.hero{background:linear-gradient(110deg,#071a36 0%,#0b2a4c 55%,#0b7658 100%);color:white;padding:26px 22px 24px;border-radius:0 0 26px 26px;position:relative;overflow:hidden}
+.brand{font-size:36px;font-weight:800;letter-spacing:-1px}.brand span{color:#3be58a}.tag{font-size:21px;font-weight:700;margin:10px 0}.intro{line-height:1.45;color:#e3eaf4;max-width:390px}.pill{display:inline-block;background:#0d3d4c;border:1px solid #2b997a;padding:8px 11px;border-radius:18px;font-size:12px;margin:5px 4px 0 0}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;padding:16px 14px}.quick button{background:white;border-radius:17px;padding:15px 5px 12px;box-shadow:0 4px 15px #1427440a;color:var(--navy);font-size:12px;font-weight:700}.ico{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#e1fff0;color:#07985a;font-size:23px;margin:0 auto 9px}.section{padding:8px 16px}.section-head{display:flex;align-items:center;justify-content:space-between;margin:7px 0 12px}.section h2{font-size:20px;margin:0}.small{font-size:12px;color:var(--muted)}.banner{background:linear-gradient(110deg,#00865d,#0bbb72);color:white;padding:22px;border-radius:18px;margin-bottom:15px}.banner h2{font-size:25px;margin-bottom:8px}.banner p{line-height:1.4;margin:0 0 15px}.btn-light{background:white;color:var(--navy);padding:11px 17px;border-radius:25px;font-weight:700}.btn-green{background:var(--green);color:white;padding:11px 17px;border-radius:25px;font-weight:700}.task{display:flex;gap:12px;align-items:center;background:white;padding:14px;border-radius:16px;margin:10px 0;box-shadow:0 4px 15px #14274408}.task .ico{flex-shrink:0;margin:0}.task-main{flex:1;min-width:0}.task-title{font-weight:700;font-size:14px;margin-bottom:5px}.reward{color:#07985a;font-weight:800;font-size:14px}.task button{font-size:12px;padding:10px 12px;white-space:nowrap}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.product{background:white;border-radius:16px;padding:14px;min-height:125px}.product .emoji{font-size:26px}.product h3{font-size:15px;margin:9px 0 5px}.product p{font-size:12px;color:var(--muted);margin:0 0 12px}.product .price{font-weight:800;margin-bottom:10px}.wallet{display:flex;align-items:center;gap:12px;background:var(--navy);color:white;padding:17px;border-radius:18px;margin:15px 0}.wallet-info{flex:1}.wallet strong{display:block;font-size:24px;margin-top:4px}.notice{font-size:12px;line-height:1.45;color:#6d7890;padding:10px 3px}.bottom{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e6ebf1;display:flex;justify-content:center;z-index:5}.bottom-inner{max-width:760px;width:100%;display:grid;grid-template-columns:repeat(4,1fr)}.bottom button{background:white;color:#8b98aa;padding:11px 3px 9px;font-size:12px}.bottom button span{display:block;font-size:22px;margin-bottom:4px}.bottom button.active{color:#07985a;font-weight:800}.view{display:none}.view.active{display:block}.formbox{background:white;border-radius:18px;padding:18px}.formbox label{display:block;font-size:13px;margin:12px 0 6px}.formbox input,.formbox select{width:100%;padding:12px;border:1px solid #dbe3ec;border-radius:10px;background:#fff}.full{width:100%;margin-top:15px}.empty{padding:25px;text-align:center;color:var(--muted);background:white;border-radius:16px}
+@media(min-width:600px){.hero{margin-top:16px;border-radius:26px}.quick{gap:14px;padding:20px 16px}.section{padding:10px 20px}.cards{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <div class="brand">◉ Job<span>eko</span></div>
+  <div class="tag">Gagnez de l’argent en ligne</div>
+  <p class="intro">Découvrez des produits et des activités en ligne. Consultez les conditions avant de participer.</p>
+  <div class="pill">✓ Togo</div><div class="pill">▣ Téléphone et ordinateur</div><div class="pill">◎ Interface en français</div>
+</header>
+
+<div class="view active" id="home">
+  <div class="quick">
+    <button onclick="show('tasks')"><span class="ico">✓</span>Tâches</button>
+    <button onclick="show('products')"><span class="ico">▣</span>Produits</button>
+    <button onclick="show('referral')"><span class="ico">♧</span>Parrainage</button>
+    <button onclick="show('wallet')"><span class="ico">₣</span>Portefeuille</button>
+  </div>
+  <section class="section"><div class="banner"><h2>Tâches disponibles</h2><p>Explorez les activités proposées et vérifiez leurs conditions et récompenses.</p><button class="btn-light" onclick="show('tasks')">Voir les activités →</button></div></section>
+  <section class="section">
+    <div class="section-head"><h2>Activités proposées</h2><span class="small">Démo</span></div>
+    <div class="task"><span class="ico">👍</span><div class="task-main"><div class="task-title">Découvrir une offre</div><div class="small">Exemple de tâche · 5 min</div></div><button class="btn-green" onclick="show('tasks')">Voir</button></div>
+    <div class="task"><span class="ico" style="background:#e6efff;color:#2878dc">▶</span><div class="task-main"><div class="task-title">Regarder une présentation</div><div class="small">Exemple de tâche · 3 min</div></div><button class="btn-green" onclick="show('tasks')">Voir</button></div>
+  </section>
+  <section class="section"><div class="wallet"><div style="font-size:28px">▣</div><div class="wallet-info"><span class="small" style="color:#c9d4e4">Solde de démonstration</span><strong>0 FCFA</strong></div><button class="btn-green" onclick="show('wallet')">Portefeuille</button></div><p class="notice">Prototype de démonstration : aucun gain réel n’est crédité et aucun paiement n’est effectué sur cette page.</p></section>
+</div>
+
+<div class="view" id="tasks"><section class="section"><div class="section-head"><h2>Tâches</h2><span class="small">Exemples</span></div>
+<div class="task"><span class="ico">👍</span><div class="task-main"><div class="task-title">Découvrir une offre partenaire</div><div class="small">Lire les conditions avant de participer</div></div><button class="btn-green" onclick="alert('Démo : aucune tâche rémunérée n’est encore connectée.')">Commencer</button></div>
+<div class="task"><span class="ico">▶</span><div class="task-main"><div class="task-title">Regarder une présentation</div><div class="small">Activité illustrative</div></div><button class="btn-green" onclick="alert('Démo : aucune tâche rémunérée n’est encore connectée.')">Commencer</button></div>
+<div class="notice">Les récompenses devront être définies à partir d’activités réelles et vérifiables. Ne promettez pas de gains garantis.</div></section></div>
+
+<div class="view" id="products"><section class="section"><div class="section-head"><h2>Produits</h2><span class="small">Catalogue démo</span></div><div class="cards">
+<div class="product"><div class="emoji">🎧</div><h3>Écouteurs sport</h3><p>Pour écouter de la musique en déplacement.</p><div class="price">Prix à définir</div><button class="btn-green" onclick="buy('Écouteurs sport')">Voir le produit</button></div>
+<div class="product"><div class="emoji">⌚</div><h3>Montre connectée</h3><p>Un accessoire pour le quotidien.</p><div class="price">Prix à définir</div><button class="btn-green" onclick="buy('Montre connectée')">Voir le produit</button></div>
+<div class="product"><div class="emoji">🎒</div><h3>Sac de sport</h3><p>Pour transporter ses affaires.</p><div class="price">Prix à définir</div><button class="btn-green" onclick="buy('Sac de sport')">Voir le produit</button></div>
+<div class="product"><div class="emoji">🔊</div><h3>Mini enceinte</h3><p>Une enceinte portable.</p><div class="price">Prix à définir</div><button class="btn-green" onclick="buy('Mini enceinte')">Voir le produit</button></div>
+</div><p class="notice">Les achats réels nécessitent des prix confirmés, des conditions de vente, un système de commande et un prestataire de paiement.</p></section></div>
+
+<div class="view" id="referral"><section class="section"><div class="formbox"><h2>Parrainage</h2><p>Invitez vos amis lorsque cette fonctionnalité sera activée.</p><label>Votre code de parrainage (démo)</label><input value="JOBEKO-DEMO" readonly><button class="btn-green full" onclick="navigator.clipboard?.writeText('JOBEKO-DEMO').then(()=>alert('Code copié si votre navigateur autorise la copie.')).catch(()=>alert('Code : JOBEKO-DEMO'))">Copier le code</button><p class="notice">Aucune commission réelle n’est calculée dans cette version.</p></div></section></div>
+
+<div class="view" id="wallet"><section class="section"><div class="formbox"><h2>Portefeuille</h2><p>Solde de démonstration : <strong>0 FCFA</strong></p><label>Mode de retrait (à connecter)</label><select><option>Choisir un mode</option><option>Mixx by Yas</option><option>Moov Money</option></select><label>Numéro de téléphone</label><input type="tel" placeholder="Ex. : 90 00 00 00"><label>Montant (FCFA)</label><input type="number" min="0" placeholder="Montant demandé"><button class="btn-green full" onclick="alert('Les retraits ne sont pas activés dans cette démo. Aucun paiement ne sera envoyé.')">Préparer une demande</button><p class="notice">Les demandes de retrait ne seront effectives qu’après mise en place d’un backend sécurisé, vérification des soldes et intégration autorisée du prestataire de paiement. Les frais éventuels devront être affichés clairement avant confirmation.</p></div></section></div>
+
+<div class="view" id="profile"><section class="section"><div class="formbox"><h2>Mon compte</h2><p>La création de compte et la connexion seront ajoutées à la version connectée.</p><label>Adresse e-mail</label><input type="email" placeholder="vous@exemple.com"><label>Mot de passe</label><input type="password" placeholder="Au moins 8 caractères"><button class="btn-green full" onclick="alert('Inscription non activée dans le prototype. Aucun renseignement n’est envoyé ni enregistré.')">Créer un compte (démo)</button><p class="notice">N’utilisez pas un vrai mot de passe sur ce prototype.</p></div></section></div>
+</div>
+<nav class="bottom"><div class="bottom-inner">
+<button class="active" data-view="home" onclick="show('home')"><span>⌂</span>Accueil</button>
+<button data-view="tasks" onclick="show('tasks')"><span>✓</span>Tâches</button>
+<button data-view="referral" onclick="show('referral')"><span>♧</span>Parrainage</button>
+<button data-view="profile" onclick="show('profile')"><span>♙</span>Moi</button>
+</div></nav>
+<script>
+function show(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===id));document.querySelectorAll('.bottom button').forEach(b=>b.classList.toggle('active',b.dataset.view===id));window.scrollTo({top:0,behavior:'smooth'})}
+function buy(name){alert('Produit sélectionné : '+name+'. Le paiement et la commande ne sont pas encore activés.')}
+</script>
+</body></html>
